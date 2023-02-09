@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinosaur</title>
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dinosaur</title>
+        <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         #game{
-            height: 200px;
-            width: 600px;
+            height: 300px;
+            width: 800px;
             margin: auto;
-            border: 1px solid black;
+            border: 5px solid black;
+            margin-top: 180px;
         }
         #dinosaur{
-            background-image: url(png-transparent-green-dinosaur-illustration-tyrannosaurus-monster-dinosaur-cartoon-drawing-dino-child-terrestrial-animal-fictional-character.gif);
-            height: 50px;
-            width: 50px;
-            background-size: 50px 50px;
+            background-image: url(PNG-TR~1.PNG);
+            height: 100px;
+            width: 100px;
+            background-size: 100px 100px;
             position: relative;
-            top: 150px;
+            top: 190px;
         }
         .jump{
             animation: movement .3s linear;
@@ -33,13 +34,13 @@
                 top: 150px;
             }
             30%{
-                top: 130px;
+                top: 100px;
             }
             50%{
-                top: 80px;
+                top: 50px;
             }
             80%{
-                top: 130px;
+                top: 100px;
             }
             100%{
                 top: 150px;
@@ -47,33 +48,54 @@
         }
         #cactus{
             background: url(png-transparent-cactus-cactus-cartoon-plant-thumbnail.gif);
-            height: 50px;
-            width: 30px;
-            background-size: 30px 50px;
+            height: 100px;
+            width: 100px;
+            background-size: 100px 100px;
             position: relative;
-            left: 570px;
-            top: 100px;
+            left: 720px;
+            top: 97px;
+            
+        }
+        .run{
             animation: cactus 1s infinite linear;
         }
-        /* .run{
-            animation: cactus 1s infinite linear;
-        } */
         @keyframes cactus{
             0%{
-                left: 570px;
+                left: 720px;
             }
             100%{
-                left: -10px;
+                left: 0px;
             }
         }
+        .button{
+            text-align: center;
+            padding-top: 20px;
+        }
+        button{
+            padding: 10px 15px;
+            letter-spacing: 2px;
+            font-size: 14px;
+            border-radius: 10px;
+            border: none;
+            background-color: lightgreen;
+            color: white;
+            cursor: pointer;
+        }
+        button:active{
+            background-color: green;
+        }
     </style>
-</head>
-<body>
-    <div id="game">
-        <div id="dinosaur"></div>
-        <div id="cactus"></div>
-    </div>
+    </head>
+    <body>
+        <div id="game">
+            <div id="duration"></div>
+            <div id="dinosaur"></div>
+            <div id="cactus"></div>
+        </div>
+        <div class="button">
+            <button id="button">Start</button>
+        </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
